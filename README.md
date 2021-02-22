@@ -1,10 +1,13 @@
 # Fraud-Detection-with-ML
 Publish Site:  https://xzhangfox.github.io/Fraud-Detection-with-ML/
+<img align="center" src="https://github.com/xzhangfox/Fraud-Detection-with-ML/blob/main/images/flag.png" />
+This page for IT consulting company website simulation. It aims to present two data cases from the first perspective of FoxData.
 
 This project is split into two cases:
-* 1. The first case aims to implement supervise model to detect fraud transactions. 
-* 2. The second case focus on data processing and visualizations.
-Both cases are visualized with D3, Plotly, Matplotlib.
+* The first case aims to implement supervise model to detect fraud transactions. 
+* The second case focus on data processing and visualizations.
+
+Both cases are visualized by D3, Plotly, and Matplotlib.
 
 ## Nootbook
 For details of data processing and methodologies. Please visit the shared Google Colab Notebooks:
@@ -18,4 +21,11 @@ For details of data processing and methodologies. Please visit the shared Google
 * imblearn 0.5.0+
 * sklearn
 * D3
-## Data
+
+## Motivation
+The project is an exercise in challenging full-stack positions. Aimed at completing a series of comprehensive qualities including data preprocessing, modeling, visualization, front-end design and so on in a short time. The total time was 15 hours.
+
+## Future Improvement
+* Try more machine learning models and manually tune to get the optimal solution.
+* Optimize the problem of too long single page length for better user interaction.
+* Embed model allows the user to directly play with new inputs. Make the webpage have the function of real-time calculation and feedback.
