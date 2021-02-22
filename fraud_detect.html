@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> FoxData </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+
+
+  <!-- Load color palettes -->
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+   <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              FoxData
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="fraud_detect.html">Fraud Detection <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customer.html">Our Customer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+              </li>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- why section -->
+
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          How to Implement Machine Learning on <span>Fraud Detection</span>
+        </h2>
+      </div>
+      <div class="heading_container heading_center">
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+
+          <h6>
+              In financial services, particularly in the emerging field of mobile money transactions, there is a lack of publicly available data sets. Financial data sets are important to many researchers, especially those of us who work in the area of fraud detection. Part of the problem is the private nature of financial transactions, which means there are no publicly available data sets.To solve this problem, we found a synthetic dataset on Kaggle that was generated using an emulator called PaySim. Paysim uses aggregated data from private datasets to generate a synthetic dataset that resembles normal transaction operations and injects malicious behavior for later evaluation of the performance of the fraud detection method.
+          </h6>
+
+        <br>
+        <img src="images/table.png" alt="" width="1140">
+        <i>Data Resource: <a href="https://www.kaggle.com/ntnu-testimon/paysim1">Kaggle</a></i>
+        <br>
+      </div>
+
+      <div class="why_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s1.png" alt="">
+          </div>
+          <div class="detail-box">
+
+            <h5>
+              Feature Selection
+            </h5>
+            <h6>
+              From the raw data, we can see that transaction is divided into five types, and the overall data is divided into two categories based on fraudulent and non-fraudulent data. Common sense suggests that there are some types of fraud that are almost impossible to commit. This research is mainly aimed at detection of fraud. Given the data imbalance, we might be able to get the data closer to balance by cutting back on non-fraudulent transaction types.
+            </h6>
+
+            <!-- Add 2 buttons -->
+            <button onclick="update(data1)">Non-fraud</button>
+            <button onclick="update(data2)">Fraud</button>
+
+            <!-- Create a div where the graph will take place -->
+            <div id="my_dataviz1"></div>
+            <h6>
+              Obviously, except for Cash Out and Transfer, there is no risk of fraud in other transaction types. Therefore, we only need to keep the above transaction types for further study.
+            </h6>
+
+            <section class="service_section layout_padding">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="box ">
+                    <div class="detail-box">
+                      <img src="images/table2.png" alt="">
+                      <br><br>
+                      <p><a href="https://colab.research.google.com/drive/1I28aASvBEFG3KyUwzkhiR_tEe0tATUEW?usp=sharing#scrollTo=6PylLURYB3i5"><i>Check for Details of New Features Calculation</i></a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 ">
+                  <div class="box ">
+                    <div class="detail-box">
+                    <h6>
+                      From the top heat map, we can see that there are many features containing repeated information.Therefore, I merge all the columns of original and destination account amount changes respectively.
+                      Therefore, I merge all the columns of original and destination account amount changes respectively.
+                      Finally, the <b>step, type, isFraud, DestAmount, OrigAmount</b> can represent all the valid information in the original chart.
+                    </h6>
+                    <h6>
+                      As can be seen from correlation, step correlations are very weak. Therefore, the most effective feature for fraud detection is to calculate the combined new features: <b>DestAmount</b> and <b>OrigAmount</b>.
+                    </h6>
+                    <h6>
+                      And we need to split the case into <b>Cash Out</b> and <b>Transfer</b>.
+                    </h6>
+                  </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s1.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Oversampling - SMOTE
+            </h5>
+            <p>
+              Imbalanced classification involves developing predictive models on classification datasets that have a severe class imbalance.
+
+              The challenge of working with imbalanced datasets is that most machine learning techniques will ignore, and in turn have poor performance on, the minority class, although typically it is performance on the minority class that is most important.
+              
+              One approach to addressing imbalanced datasets is to oversample the minority class. The simplest approach involves duplicating examples in the minority class, although these examples don’t add any new information to the model. Instead, new examples can be synthesized from the existing examples. This is a type of data augmentation for the minority class and is referred to as the Synthetic Minority Oversampling Technique, or SMOTE for short.
+            </p>
+            <a href="https://colab.research.google.com/drive/1I28aASvBEFG3KyUwzkhiR_tEe0tATUEW?usp=sharing#scrollTo=BfPKbZ8mJJX8">Click for details</a>
+            <section class="service_section layout_padding">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <img src="images/os1.png" alt="">
+                </div>
+                <div class="col-md-6 ">
+                  <img src="images/os2.png" alt="">
+                </div>
+              </div>
+            </section>
+            <h6>After oversamling by SMOTE, the data is quiet balanced. In this way, many data over-fitting problems can be avoided, or the situation that KNN and others cannot fit unbalanced data.</h6>
+            <h6>Moreover, because the fraud data is small and the relative value is unusual, it is easy to identify as outliers by statistical models. So I kept all the data, believing that this was the best way to maximize the raw data and prevent information loss.
+              More details about data cleaning <a href="https://colab.research.google.com/drive/1I28aASvBEFG3KyUwzkhiR_tEe0tATUEW?usp=sharing#scrollTo=Ek630HUpVzDP">Click Here</a>
+            </h6>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s1.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Cash-out Fraud Detection
+            </h5>
+            
+            <section class="service_section layout_padding">
+              <h6>Due to the characteristics of Scatter plot before, I think KNN will have a good performance. At the same time, Logistic Regression also has certain advantages in processing such data. Here's why the two models were selected, as well as the Confusion Matrix for the predicted results.</h6>
+              <h6>Because of the authority of evaluation, we use raw data that are not involved in the training at all. However, due to the huge gap between original data fraud and non-fraud, it is difficult to see intuitive results, that's why the following factors are all macro average. Furthermore, I evaluate them again with fraud-only data.
+                <a href="https://colab.research.google.com/drive/1I28aASvBEFG3KyUwzkhiR_tEe0tATUEW?usp=sharing#scrollTo=hdb21f-IrdkO">Click Here</a> to more details</h6>
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="box ">
+                    <h4>KNN</h4>
+                    <p>
+
+                      The theory is mature and the idea is simple, which can be used for both classification and regression<br>
+                      
+                      It can be used for nonlinear classification<br>
+                      
+                      The training time complexity is lower than that of algorithms such as support vector machine<br>
+                      
+                      There is no assumption on data, with high accuracy and insensitivity to outliers
+                      
+                      
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 ">
+                  <div class="box ">
+                    <h4>
+                      Logistic Regression
+                    </h4>
+                    <p>
+                      Simple implementation, widely used in industrial problems;<br><br>
+                      The calculation amount is very small, the speed is very fast.<br><br>
+                      For logistic regression, multicollinearity is not a problem, which can be solved by combining with L2 regularization.<br>
+                      The calculation cost is not high, easy to understand and implement;
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 ">
+                  <div class="box ">
+                    <h4>Macro Average of Evaluation Factors</h4>
+                  <!-- Add 2 buttons -->
+                  <button onclick="update2(data3)">KNN</button>
+                  <button onclick="update2(data4)">Logistic Regression</button>
+                    <!-- Create a div where the graph will take place -->
+                    <div id="my_dataviz2"></div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 ">
+                  <div class="box ">
+                    <div class="detail-box">
+                      <img src="images/CO_CM.png" alt="">
+                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+            <h6>Because we only focus on detecting the fraud transaction. Logistic Regression has fewer errors here, thus we can use it for Cash Out fraud.</h4>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s1.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Transfer Fraud Detection
+            </h5>
+            <section class="service_section layout_padding">
+              <h6>According to the scatter plot behind, we can see the transfer transaction data meets the same issue with cash-out: the important data has risk to be determined as outliers. So I just skip the data cleaning, then swap the dataset then process it in the same methods.</h6>
+              <div class="row">
+
+
+                <div class="col-md-6 ">
+                  <div class="box ">
+                    <h4>Macro Average of Evaluation Factors</h4>
+                  <!-- Add 2 buttons -->
+                  <button onclick="update3(data5)">KNN</button>
+                  <button onclick="update3(data6)">Logistic Regression</button>
+                    <!-- Create a div where the graph will take place -->
+                    <div id="my_dataviz3"></div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 ">
+                  <div class="box ">
+                    <div class="detail-box">
+                      <img src="images/CO_CM1.png" alt="">
+                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+            <h6>Logistic regression performes not bad in this case too, but not as well as KNN. Despite LR is better to classify the non-fraud transaction, but KNN is way much better than it on fraud transaction.</h6>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s1.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Conclusion
+            </h5>
+            <p>
+              Anti-fraud has always been one of the hottest and most challenging projects. Anti-fraud programs often involve clients having no idea what fraud is and what it is not. In other words, the definition of fraud is vague. At a minimum, anti-fraud may seem like a binary classification, but when you think about it, it's actually a multi-class classification because each different type of fraud can be treated as a separate type. A single type of fraud almost does not exist, and the methods of fraud change from day to day. Even industries that deal with fraud for years, such as banks and insurance companies, must constantly update their detection methods.<br>
+
+              Based on this data, my method is to simplify the data and get the most related features.Because in the data scient field, more features are not always better.<br>
+
+              After the pre-processing, I found that the <b>amount changes</b> of <b>original account</b> and <b>destination account</b> ware highly related to the fraud transaction.<br>
+
+              I find that there are specific patterns for different types of transactions:<br><br>
+
+              1. CASH-IN: Non-fraud<br>
+              2. DEBIT: Non-fraud<br>
+              3. PAYMENT: Non-fraud<br>
+              4. CASH-OUT: When the amount of the original account decreses and destination account increases, this transaction has high risk to be fraud.<br>
+              5. TRANSFER: When the amount of the original account decreses and destination account stays still, this transaction has high risk to be fraud.<br><br>
+              That's why I excluded other transaction types other than CASH-OUT and TRANSFER. And the plots insipred me that KNN should be easily and accurately classify the fraud transactions. And the result showed that I am right.
+
+              In the future, if there are more transactions data coming, I will suggest the facility follow the steps to detect the fraud:<br><br>
+
+              1. Only extract the CASH-OUT and the TRANSFER transaction.<br>
+              2. Apply my trained Logistic Regression model to detect CASH-OUT fraud.<br>
+              3. Apply my trained KNN model to detect TRANSFER fraud.<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s1.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Future Improvement
+            </h5>
+            <p>
+              If I have enough time, I can try more models, such as XGBoost, Multilayer Perceptron, Decision Tree, Random Forest, etc., and conduct parameter tuning and tuning.<br><br>
+
+              By comparing the Confusion Matrix of multiple models, we can more intuitively choose the optimal model and the optimal solution under different conditions.<br><br>
+
+              Combining different data augmentation and model embedding, we may be able to achieve more direction and better results.<br><br>
+
+              Given enough time, this interface can have more interactive effects, as well as a more concise and beautiful layout.<br><br>
+
+              It may be possible to connect to a trained model so that the user can enter a Feature to verify whether there is a potential fraud risk.
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="btn-box">
+        <a href="https://colab.research.google.com/drive/1I28aASvBEFG3KyUwzkhiR_tEe0tATUEW?usp=sharing">
+          Read More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end why section -->
+
+<!-- info section -->
+
+<section class="info_section layout_padding2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 info_col">
+        <div class="info_contact">
+          <h4>
+            Address
+          </h4>
+          <div class="contact_link_box">
+            <a href="https://www.google.com/maps/place/27-16+41st+Ave,+Long+Island+City,+NY+11101/@40.7513562,-73.9401456,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258d4e3965131:0xb194eff7a09c84fa!8m2!3d40.7513562!4d-73.9379569">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Location
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call (619)408-8347
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                xzhangfox@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="info_social">
+          <a href="https://www.facebook.com/xi.zhang.98229241">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/FFF0XXX">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/xzhangfox/">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/xzhangfox">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 info_col">
+        <div class="info_detail">
+          <h4>
+            Info
+          </h4>
+          <p>
+            A world adventurer and problem solver.
+            Always be curious about new things and enthusiastic about big challenges. 
+            With data as the rope, down-to-earth climb the hills of life.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-2 mx-auto info_col">
+        <div class="info_link_box">
+          <h4>
+            Links
+          </h4>
+          <div class="info_links">
+            <a class="active" href="index.html">
+              Home
+            </a>
+            <a class="" href="about.html">
+              About
+            </a>
+            <a class="" href="customer.html">
+              Our Customer
+            </a>
+            <a class="" href="fraud_detect.html">
+              Fraud Detection
+            </a>
+            <a class="" href="team.html">
+              Team
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 info_col ">
+        <h4>
+          Subscribe
+        </h4>
+        <form action="#">
+          <input type="text" placeholder="Enter email" />
+          <button type="submit">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end info section -->
+
+<!-- footer section -->
+<section class="footer_section">
+  <div class="container">
+    <p>
+      Copyright &copy; 2021. | Xi Zhang | All rights reserved.
+    </p>
+  </div>
+</section>
+<!-- footer section -->
+
+<!-- jQery -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- popper js -->
+<script src="js/popper.min.js">
+</script>
+<!-- bootstrap js -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- owl slider -->
+<script type="text/javascript" src="js/owl.carousel.min.js">
+</script>
+<!-- custom js -->
+<script type="text/javascript" src="js/custom.js"></script>
+<!-- Google Map -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+</script>--->
+<!-- End Google Map -->
+
+</body>
+
+
+
+
+<script>
+
+  // set the dimensions and margins of the graph
+  var margin = {top: 100, right: 100, bottom: 100, left: 100},
+    width = 820 - margin.left - margin.right,
+    height = 820 - margin.top - margin.bottom;
+  
+  // append the svg object to the body of the page
+  var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+  
+  //Read the data
+  d3.csv("https://raw.githubusercontent.com/xzhangfox/Fraud-Detection-with-ML/main/case1/data/ori_corr.csv", function(data) {
+  
+    // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
+    var myGroups = d3.map(data, function(d){return d.group;}).keys()
+    var myVars = d3.map(data, function(d){return d.variable;}).keys()
+  
+    // Build X scales and axis:
+    var x = d3.scaleBand()
+      .range([ 0, width ])
+      .domain(myGroups)
+      .padding(0.05);
+    svg.append("g")
+      .style("font-size", 12)
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x).tickSize(0))
+      .select(".domain").remove()
+  
+    // Build Y scales and axis:
+    var y = d3.scaleBand()
+      .range([ height, 0 ])
+      .domain(myVars)
+      .padding(0.05);
+    svg.append("g")
+      .style("font-size", 12)
+      .call(d3.axisLeft(y).tickSize(0))
+      .select(".domain").remove()
+  
+    // Build color scale
+    var myColor = d3.scaleSequential()
+      .interpolator(d3.interpolateInferno)
+      .domain([-1,1])
+  
+    // create a tooltip
+    var tooltip = d3.select("#my_dataviz")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "white")
+      .style("border", "solid")
+      .style("border-width", "2px")
+      .style("border-radius", "5px")
+      .style("padding", "5px")
+  
+    // Three function that change the tooltip when user hover / move / leave a cell
+    var mouseover = function(d) {
+      tooltip
+        .style("opacity", 1)
+      d3.select(this)
+        .style("stroke", "black")
+        .style("opacity", 1)
+    }
+    var mousemove = function(d) {
+      tooltip
+        .html("The correlation coefficient of<br>this cell is: " + d.value)
+        .style("left", (d3.mouse(this)[0]+410) + "px")
+        .style("top", (d3.mouse(this)[1]+240) + "px")
+    }
+    var mouseleave = function(d) {
+      tooltip
+        .style("opacity", 0)
+      d3.select(this)
+        .style("stroke", "none")
+        .style("opacity", 0.8)
+    }
+  
+    // add the squares
+    svg.selectAll()
+      .data(data, function(d) {return d.group+':'+d.variable;})
+      .enter()
+      .append("rect")
+        .attr("x", function(d) { return x(d.group) })
+        .attr("y", function(d) { return y(d.variable) })
+        .attr("rx", 4)
+        .attr("ry", 4)
+        .attr("width", x.bandwidth() )
+        .attr("height", y.bandwidth() )
+        .style("fill", function(d) { return myColor(d.value)} )
+        .style("stroke-width", 4)
+        .style("stroke", "none")
+        .style("opacity", 0.8)
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave)
+  })
+  
+  // Add title to graph
+  svg.append("text")
+          .attr("x", 0)
+          .attr("y", -50)
+          .attr("text-anchor", "left")
+          .style("font-size", "22px")
+          .text("Feature Correlation from Original Data");
+  
+  // Add subtitle to graph
+  svg.append("text")
+          .attr("x", 0)
+          .attr("y", -20)
+          .attr("text-anchor", "left")
+          .style("font-size", "14px")
+          .style("fill", "grey")
+          .style("max-width", 400)
+          .text("Correlation between Features of Fraud Data");
+  
+  
+  </script>
+
+
+
+<!--Bar Plot======================================================================================-->
+<script>
+
+  // create 2 data_set
+  var data1 = [
+     {group: "CASH_OUT", value: 2237500},
+     {group: "PAYMENT", value: 2151495},
+     {group: "CASH_IN", value: 1399284},
+     {group: "TRANSFER", value: 532909},
+     {group: "DEBIT", value: 41432}
+  ];
+  
+  var data2 = [
+     {group: "CASH_OUT", value: 4116},
+     {group: "PAYMENT", value: 0},
+     {group: "CASH_IN", value: 0},
+     {group: "TRANSFER", value: 4097},
+     {group: "DEBIT", value: 0}
+  ];
+  
+  // set the dimensions and margins of the graph
+  var margin1 = {top: 30, right: 30, bottom: 70, left: 60},
+      width1 = 1160 - margin1.left - margin1.right,
+      height1 = 600 - margin1.top - margin1.bottom;
+  
+  // append the svg object to the body of the page
+  var svg1 = d3.select("#my_dataviz1")
+    .append("svg")
+      .attr("width", width1 + margin1.left + margin1.right)
+      .attr("height", height1 + margin1.top + margin1.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin1.left + "," + margin1.top + ")");
+  
+  // Initialize the X axis
+  var x1 = d3.scaleBand()
+    .range([ 0, width1 ])
+    .padding(0.2);
+  var xAxis1 = svg1.append("g")
+    .attr("transform", "translate(0," + height1 + ")")
+  
+  // Initialize the Y axis
+  var y1 = d3.scaleLinear()
+    .range([ height1, 0]);
+  var yAxis1 = svg1.append("g")
+    .attr("class", "myYaxis")
+  
+  
+  // A function that create / update the plot for a given variable:
+  function update(data) {
+  
+    // Update the X axis
+    x1.domain(data.map(function(d) { return d.group; }))
+    xAxis1.call(d3.axisBottom(x1))
+  
+    // Update the Y axis
+    y1.domain([0, d3.max(data, function(d) { return d.value }) ]);
+    yAxis1.transition().duration(1000).call(d3.axisLeft(y1));
+  
+    // Create the u variable
+    var u = svg1.selectAll("rect")
+      .data(data)
+  
+    u
+      .enter()
+      .append("rect") // Add a new rect for each new elements
+      .merge(u) // get the already existing elements as well
+      .transition() // and apply changes to all of them
+      .duration(1000)
+        .attr("x", function(d) { return x1(d.group); })
+        .attr("y", function(d) { return y1(d.value); })
+        .attr("width", x1.bandwidth())
+        .attr("height", function(d) { return height1 - y1(d.value); })
+        .attr("fill", "#69b3a2")
+  
+    // If less group in the new dataset, I delete the ones not in use anymore
+    u
+      .exit()
+      .remove()
+  }
+  
+  // Initialize the plot with the first dataset
+  update(data1)
+  
+  </script>
+
+<!--Bar Plot2======================================================================================-->
+<script>
+
+  // create 2 data_set
+  var data3 = [
+     {group: "precision", value: 0.51},
+     {group: "recall", value: 0.87},
+     {group: "f1-score", value: 0.51},
+     {group: "support(x10^6)", value: 0.671250}
+  ];
+  
+  var data4 = [
+     {group: "precision", value: 0.98},
+     {group: "recall", value: 0.71},
+     {group: "f1-score", value: 0.79},
+     {group: "support(x10^6)", value: 0.671250}
+  ];
+  
+  // set the dimensions and margins of the graph
+  var margin2 = {top: 30, right: 30, bottom: 70, left: 60},
+      width2 = 500 - margin2.left - margin2.right,
+      height2 = 272 - margin2.top - margin2.bottom;
+  
+  // append the svg object to the body of the page
+  var svg2 = d3.select("#my_dataviz2")
+    .append("svg")
+      .attr("width", width2 + margin2.left + margin2.right)
+      .attr("height", height2 + margin2.top + margin2.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin2.left + "," + margin2.top + ")");
+  
+  // Initialize the X axis
+  var x2 = d3.scaleBand()
+    .range([ 0, width2 ])
+    .padding(0.2);
+  var xAxis2 = svg2.append("g")
+    .attr("transform", "translate(0," + height2 + ")")
+  
+  // Initialize the Y axis
+  var y2 = d3.scaleLinear()
+    .range([ height2, 0]);
+  var yAxis2 = svg2.append("g")
+    .attr("class", "myYaxis")
+  
+  
+  // A function that create / update the plot for a given variable:
+  function update2(data) {
+  
+    // Update the X axis
+    x2.domain(data.map(function(d) { return d.group; }))
+    xAxis2.call(d3.axisBottom(x2))
+  
+    // Update the Y axis
+    y2.domain([0, d3.max(data, function(d) { return d.value }) ]);
+    yAxis2.transition().duration(1000).call(d3.axisLeft(y2));
+  
+    // Create the u variable
+    var u = svg2.selectAll("rect")
+      .data(data)
+  
+    u
+      .enter()
+      .append("rect") // Add a new rect for each new elements
+      .merge(u) // get the already existing elements as well
+      .transition() // and apply changes to all of them
+      .duration(1000)
+        .attr("x", function(d) { return x2(d.group); })
+        .attr("y", function(d) { return y2(d.value); })
+        .attr("width", x2.bandwidth())
+        .attr("height", function(d) { return height2 - y2(d.value); })
+        .attr("fill", "#2fbad0")
+  
+    // If less group in the new dataset, I delete the ones not in use anymore
+    u
+      .exit()
+      .remove()
+  }
+  
+  // Initialize the plot with the first dataset
+  update2(data3)
+  
+  </script>
+
+<!--Bar Plot3======================================================================================-->
+<script>
+
+  // create 2 data_set
+  var data5 = [
+     {group: "precision", value: 0.88},
+     {group: "recall", value: 1.00},
+     {group: "f1-score", value: 0.93},
+     {group: "support(x10^6)", value: 0.159873}
+  ];
+  
+  var data6 = [
+     {group: "precision", value: 0.94},
+     {group: "recall", value: 0.76},
+     {group: "f1-score", value: 0.82},
+     {group: "support(x10^6)", value: 0.159873}
+  ];
+  
+  // set the dimensions and margins of the graph
+  var margin3 = {top: 30, right: 30, bottom: 70, left: 60},
+      width2 = 500 - margin3.left - margin3.right,
+      height2 = 272 - margin3.top - margin3.bottom;
+  
+  // append the svg object to the body of the page
+  var svg3 = d3.select("#my_dataviz3")
+    .append("svg")
+      .attr("width", width2 + margin3.left + margin3.right)
+      .attr("height", height2 + margin3.top + margin3.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin3.left + "," + margin3.top + ")");
+  
+  // Initialize the X axis
+  var x3 = d3.scaleBand()
+    .range([ 0, width2 ])
+    .padding(0.2);
+  var xAxis3 = svg3.append("g")
+    .attr("transform", "translate(0," + height2 + ")")
+  
+  // Initialize the Y axis
+  var y3 = d3.scaleLinear()
+    .range([ height2, 0]);
+  var yAxis3 = svg3.append("g")
+    .attr("class", "myYaxis")
+  
+  
+  // A function that create / update the plot for a given variable:
+  function update3(data) {
+  
+    // Update the X axis
+    x3.domain(data.map(function(d) { return d.group; }))
+    xAxis3.call(d3.axisBottom(x3))
+  
+    // Update the Y axis
+    y3.domain([0, d3.max(data, function(d) { return d.value }) ]);
+    yAxis3.transition().duration(1000).call(d3.axisLeft(y3));
+  
+    // Create the u variable
+    var u = svg3.selectAll("rect")
+      .data(data)
+  
+    u
+      .enter()
+      .append("rect") // Add a new rect for each new elements
+      .merge(u) // get the already existing elements as well
+      .transition() // and apply changes to all of them
+      .duration(1000)
+        .attr("x", function(d) { return x3(d.group); })
+        .attr("y", function(d) { return y3(d.value); })
+        .attr("width", x3.bandwidth())
+        .attr("height", function(d) { return height2 - y3(d.value); })
+        .attr("fill", "#bc4397")
+  
+    // If less group in the new dataset, I delete the ones not in use anymore
+    u
+      .exit()
+      .remove()
+  }
+  
+  // Initialize the plot with the first dataset
+  update3(data5)
+  
+  </script>
+
+</html>
