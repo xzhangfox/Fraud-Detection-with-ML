@@ -23,7 +23,7 @@ For details of data processing and methodologies. Please visit the shared Google
 * D3
 
 ## Motivation
-The project is an exercise in challenging full-stack positions. Aimed at completing a series of comprehensive qualities including data preprocessing, modeling, visualization, front-end design and so on in a short time. The total time was 15 hours.
+The project is an exercise in challenging full-stack positions. Aimed at completing a series of comprehensive qualities including data preprocessing, modeling, visualization, front-end design and so on in a short time.Tried multiple D3 diagrams at the same time, understood the architecture, and skillfully implemented. The total time was 15 hours.
 
 ## Future Improvement
 * Try more machine learning models and manually tune to get the optimal solution.
